@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tambah Ekspedisi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Modul Ekspedisi Kirim</a>
+      <a class="nav-link" href="index.html">Daftar Data</a>
+      <a class="nav-link" href="tambah.html">Tambah Data</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h2>Tambah Data Ekspedisi</h2>
+
+    <form method="post">
+
+      <label for="kode">Kode Ekspedisi</label>
+      <input type="text" class="form-control" id="kode" name="kode">
+
+      <label for="nama">Nama Ekspedisi</label>
+      <input type="text" class="form-control" id="nama" name="nama">
+
+      <label for="layanan">Jenis Layanan</label>
+      <select class="form-select" id="layanan" name="layanan">
+        <option value="Reguler">Reguler</option>
+        <option value="Express">Express</option>
+      </select>
+
+      <label for="zona">Zona Pengiriman</label>
+      <select class="form-select" id="zona" name="zona">
+        <option value="Zona 1">Zona 1</option>
+        <option value="Zona 2">Zona 2</option>
+        <option value="Zona 3">Zona 3</option>
+      </select>
+
+      <label for="estimasi">Estimasi Pengiriman (hari)</label>
+      <input type="number" class="form-control" id="estimasi" name="estimasi">
+
+      <label for="biaya">Biaya Kirim</label>
+      <input type="number" class="form-control" id="biaya" name="biaya">
+
+      <label for="status">Status</label>
+      <select class="form-select" id="status" name="status">
+        <option value="Aktif">Aktif</option>
+        <option value="Nonaktif">Nonaktif</option>
+      </select>
+
+      <br>
+      <button type="submit" class="btn btn-primary">Simpan</button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
