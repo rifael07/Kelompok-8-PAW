@@ -1,0 +1,25 @@
+body {
+    background-color: #f4f7f6;
+}
+
+.kotak-konten {
+    padding: 24px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    margin: 24px 0;
+    background-color: #ffffff;
+}
+
+.judul-halaman {
+    color: #1b5e50;
+    margin-bottom: 16px;
+}
+
+.tabel-pelanggan th {
+    background-color: #1b5e50 !important;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    font-weight: #1b5e50 bold;
+}
