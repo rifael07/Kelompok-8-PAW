@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+}
+
+.kotak-konten {
+    padding: 20px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.judul-halaman {
+    color: darkslategray;
+}
+
+.tabel-pelanggan th {
+    background-color: darkslategray !important;
+    color: white;
+}
+
