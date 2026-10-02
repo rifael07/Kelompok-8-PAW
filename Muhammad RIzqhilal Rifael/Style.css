@@ -1,0 +1,12 @@
+.center {text-align: center;}
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  padding: 20px;
+  border: 1px solid gray;
+  margin-top: 20px;
+}
