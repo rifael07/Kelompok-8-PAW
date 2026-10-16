@@ -1,3 +1,27 @@
+<?php
+require "koneksi.php";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST["nama"];
+    $email = $_POST["email"];
+    $no_hp = $_POST["no_hp"];
+    $jenis_kelamin = $_POST["jenis_kelamin"];
+    
+    $label_alamat  = $_POST["label_alamat"];
+    $alamat        = $_POST["alamat"];
+    $kota          = $_POST["kota"];
+    $provinsi      = $_POST["provinsi"];
+    $kode_pos      = $_POST["kode_pos"];
+    $is_utama      = isset($_POST["utama"]) ? "(Utama)" : "";
+
+    $alamat_pengiriman = "$label_alamat $is_utama : $alamat, $kota, $provinsi, $kode_pos";
+
+    $sql = "INSERT INTO data_pelanggan_dan_alamat (nama, email, no_hp, jenis_kelamin, alamat_pengiriman) VALUES (?, ?, ?, ?, ?)";
+    mysqli_execute_query($koneksi, $sql, [$nama, $email, $no_hp, $jenis_kelamin, $alamat_pengiriman]);
+    header("Location: index.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,10 +34,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkslategray">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Toko Online UMKM</a>
+            <a class="navbar-brand" href="index.php">Toko Online UMKM</a>
             <div class="navbar-nav">
-                <a class="nav-link" href="index.html">Daftar Pelanggan</a>
-                <a class="nav-link active" href="tambah.html">Tambah Pelanggan</a>
+                <a class="nav-link" href="index.php">Daftar Pelanggan</a>
+                <a class="nav-link active" href="tambah.php">Tambah Pelanggan</a>
             </div>
         </div>
     </nav>
@@ -91,7 +115,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success">Simpan Pelanggan</button>
-                <a href="index.html" class="btn btn-outline-secondary">Kembali ke Daftar</a>
+                <a href="index.php" class="btn btn-outline-secondary">Kembali ke Daftar</a>
             </form>
         </div>
     </div>
